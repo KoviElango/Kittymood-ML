@@ -1,0 +1,15 @@
+{
+  "name": "Kitty Mood Recognition",
+  "image": "kitty-mood-recognition:latest",
+  "extensions": [
+    "ms-python.python",
+    "ms-azuretools.vscode-docker"
+  ],
+  "settings": {
+    "python.pythonPath": "/usr/local/bin/python"
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/app,type=bind"
+  ],
+  "postCreateCommand": "pip install --no-cache-dir -r requirements.txt"
+}
